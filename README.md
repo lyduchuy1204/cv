@@ -1,12 +1,43 @@
-# CV - Ly Duc Huy
+# Ly Duc Huy — Curriculum Vitae
 
-Personal Curriculum Vitae of **Ly Duc Huy** — DevOps / Cloud / Site Reliability Engineer.
-Built as a static site (HTML / CSS / vanilla JS) and deployed to GitHub Pages.
+> DevOps / Cloud / Site Reliability Engineer based in Ho Chi Minh City.
 
-## Live site
+🌐 **Live site:** [lyduchuy1204.github.io/cv](https://lyduchuy1204.github.io/cv/)
 
-Once GitHub Pages is enabled, the CV is served at:
-`https://<your-github-username>.github.io/cv/`
+[![Deploy CV to GitHub Pages](https://github.com/lyduchuy1204/cv/actions/workflows/deploy.yml/badge.svg)](https://github.com/lyduchuy1204/cv/actions/workflows/deploy.yml)
+
+This repository hosts my online CV, served as a static site through
+GitHub Pages. It mirrors the printable A4 version recruiters receive
+and is kept in sync with my professional profile.
+
+## About me
+
+DevOps Engineer with 5+ years of hands-on experience designing and
+operating CI/CD pipelines, automating cloud infrastructure on AWS, and
+keeping production platforms reliable at scale. Currently working in the
+banking and financial services domain, with a strong focus on
+operational efficiency, security, and PCI DSS 4.0 compliance.
+
+**Core stack:** AWS · Terraform · Kubernetes (EKS) · Jenkins · Docker ·
+ELK / Grafana / Prometheus · Python · Bash
+
+## Contact
+
+- 🌐 **Live CV:** [lyduchuy1204.github.io/cv](https://lyduchuy1204.github.io/cv/)
+- 💼 **LinkedIn:** [linkedin.com/in/lyduchuy1204](https://www.linkedin.com/in/lyduchuy1204)
+- 📧 **Email:** [lyduchuy1204@gmail.com](mailto:lyduchuy1204@gmail.com)
+- 📱 **Phone:** +84 903 882 366
+- 📍 **Location:** Ho Chi Minh City, Vietnam
+
+## Certifications & learning profiles
+
+- 🏅 **Credly:** [credly.com/users/lyduchuy1204](https://credly.com/users/lyduchuy1204/)
+  — AWS Certified Solutions Architect – Associate, AWS Certified Developer – Associate, and more.
+- 📚 **AWS Skill Builder:** [skillsprofile.skillbuilder.aws/user/lyduchuy1204](https://skillsprofile.skillbuilder.aws/user/lyduchuy1204/)
+  — Ongoing AWS learning path, hands-on labs, and skill assessments.
+
+Feel free to reach out for collaboration, opportunities, or a quick chat
+about cloud and DevOps topics.
 
 ## Project structure
 
@@ -17,7 +48,7 @@ cv/
 ├── .gitignore                 # Ignored files
 ├── assets/
 │   ├── css/
-│   │   └── styles.css         # Layout & print styles (A4)
+│   │   └── styles.css         # Layout and print styles (A4)
 │   ├── js/
 │   │   └── print-cv.js        # "Download PDF" button -> window.print()
 │   ├── img/
@@ -32,7 +63,7 @@ cv/
 ## Local preview
 
 No build step is required. Open `index.html` directly in a browser, or
-serve the folder with any static server, e.g.:
+serve the folder with any static server, for example:
 
 ```bash
 # Python 3 (built-in)
@@ -51,14 +82,15 @@ A4 layout already configured. Choose **Save as PDF** as the destination.
 
 ## Deploy on GitHub Pages
 
-1. Create a public repository named `cv` on GitHub.
+The site is deployed automatically by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml)
+on every push to `main`. Initial setup:
+
+1. Create a public repository named `cv`.
 2. Push this folder to the `main` branch.
 3. Go to repository **Settings → Pages**.
-4. Under **Build and deployment**, set:
-   - **Source:** `GitHub Actions` (recommended), or
-   - **Source:** `Deploy from a branch` → `main` → `/ (root)`
-5. Wait ~1 minute, the site is live at the URL above.
+4. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+5. Wait around one minute, then visit the live URL above.
 
 ## License
 
-MIT
+MIT © Ly Duc Huy
