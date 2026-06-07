@@ -71,6 +71,21 @@ body {
     background-color: #333;
 }
 
+/* Screen-only Avatar (hidden when printing) */
+.screen-avatar {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-text);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    background-color: var(--color-bg);
+    z-index: 1000;
+}
+
 /* Header */
 .cv-header {
     text-align: center;
