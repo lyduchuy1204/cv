@@ -76,12 +76,12 @@ body {
     position: fixed;
     top: 20px;
     left: 20px;
-    width: 64px;
-    height: 64px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid var(--color-text);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--color-text);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     background-color: var(--color-bg);
     z-index: 1000;
 }
@@ -113,6 +113,26 @@ body {
 .contact-line {
     font-size: var(--font-size-body);
     margin-top: 4px;
+}
+
+/* Inline links in CV body: keep clickable but visually plain */
+.contact-line a,
+.cv-section a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-line a:hover,
+.cv-section a:hover {
+    text-decoration: underline;
+}
+
+/* No hover effects in print */
+@media print {
+    .contact-line a:hover,
+    .cv-section a:hover {
+        text-decoration: none;
+    }
 }
 
 /* Sections */
@@ -223,6 +243,10 @@ ul li {
     }
 
     .download-btn {
+        display: none !important;
+    }
+
+    .screen-avatar {
         display: none !important;
     }
 
