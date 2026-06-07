@@ -1,0 +1,269 @@
+/* ============================================================
+ * CV Stylesheet - Ly Duc Huy
+ * Layout: A4 print-friendly, 2 pages, screen + print media
+ * ============================================================ */
+
+/* Custom Properties */
+:root {
+    --font-family: 'Times New Roman', Times, serif;
+    --font-size-name: 24pt;
+    --font-size-subtitle: 12pt;
+    --font-size-body: 10.5pt;
+    --font-size-section-title: 11pt;
+    --color-text: #000000;
+    --color-bg: #ffffff;
+    --page-width: 210mm;
+    --page-height: 297mm;
+    --margin-top: 15mm;
+    --margin-bottom: 15mm;
+    --margin-left: 20mm;
+    --margin-right: 20mm;
+    --line-height: 1.4;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    color: var(--color-text);
+    background-color: #f0f0f0;
+    line-height: var(--line-height);
+}
+
+/* Container */
+.cv-container {
+    max-width: var(--page-width);
+    margin: 20px auto;
+    position: relative;
+}
+
+/* Page */
+.page {
+    background: var(--color-bg);
+    padding: var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: var(--page-height);
+}
+
+/* Download Button */
+.download-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    border: none;
+    font-family: var(--font-family);
+    font-size: var(--font-size-body);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.download-btn:hover {
+    background-color: #333;
+}
+
+/* Header */
+.cv-header {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1.5px solid var(--color-text);
+    margin-bottom: 12px;
+}
+
+.cv-header h1 {
+    font-size: var(--font-size-name);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2px;
+}
+
+.cv-title {
+    font-size: var(--font-size-subtitle);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.contact-line {
+    font-size: var(--font-size-body);
+    margin-top: 4px;
+}
+
+/* Sections */
+.cv-section {
+    margin-bottom: 14px;
+}
+
+.cv-section h2 {
+    font-size: var(--font-size-section-title);
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--color-text);
+    padding-bottom: 3px;
+    margin-bottom: 8px;
+}
+
+/* Summary */
+.summary-text {
+    text-align: justify;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3px;
+}
+
+.skill-row {
+    display: flex;
+    gap: 8px;
+    align-items: baseline;
+}
+
+.skill-label {
+    font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.skill-value {
+    font-weight: normal;
+}
+
+/* Experience Entry */
+.experience-entry {
+    margin-bottom: 12px;
+}
+
+.entry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.entry-header .company {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.entry-header .date {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.entry-subheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 4px;
+}
+
+.entry-subheader .title {
+    font-style: italic;
+}
+
+.entry-subheader .location {
+    font-style: normal;
+}
+
+.entry-description {
+    margin-bottom: 6px;
+    text-align: justify;
+}
+
+.project-name {
+    font-weight: bold;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+/* Lists */
+ul {
+    margin-left: 20px;
+    margin-bottom: 6px;
+}
+
+ul li {
+    margin-bottom: 2px;
+    text-align: justify;
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: var(--color-bg);
+        margin: 0;
+    }
+
+    .download-btn {
+        display: none !important;
+    }
+
+    .cv-container {
+        max-width: none;
+        margin: 0;
+    }
+
+    .page {
+        box-shadow: none;
+        margin: 0;
+        padding: var(--margin-top) var(--margin-right) var(--margin-bottom) var(--margin-left);
+        height: var(--page-height);
+        overflow: hidden;
+        page-break-after: always;
+    }
+
+    .page:last-child {
+        page-break-after: auto;
+    }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    :root {
+        --margin-left: 10mm;
+        --margin-right: 10mm;
+    }
+
+    .cv-container {
+        margin: 10px;
+    }
+
+    .page {
+        min-height: auto;
+    }
+
+    .entry-header,
+    .entry-subheader {
+        flex-direction: column;
+    }
+
+    .entry-header .date,
+    .entry-subheader .location {
+        margin-top: 2px;
+    }
+
+    .download-btn {
+        position: static;
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

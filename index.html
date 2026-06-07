@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Ly Duc Huy - DevOps / Cloud / Site Reliability Engineer</title>
+    <meta name="description" content="Curriculum Vitae of Ly Duc Huy - DevOps / Cloud / Site Reliability Engineer">
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="cv-container">
+        <!-- Download Button -->
+        <button class="download-btn" onclick="downloadPDF()">Download PDF</button>
+
+        <!-- PAGE 1 -->
+        <div class="page" id="page1">
+            <!-- Header -->
+            <header class="cv-header">
+                <h1>LY DUC HUY</h1>
+                <p class="cv-title">DevOps / Cloud / Site Reliability Engineer</p>
+                <p class="contact-line">lyduchuy1204@gmail.com | +84 903 882 366 | Ho Chi Minh City | linkedin.com/in/lyduchuy1204</p>
+            </header>
+
+            <!-- Summary -->
+            <section class="cv-section">
+                <h2>SUMMARY</h2>
+                <p class="summary-text">Experienced DevOps Engineer with over 5 years of hands-on experience in building and operating CI/CD pipelines, automating infrastructure deployments, and maintaining critical shared application platforms in production cloud environments. Strong background in infrastructure and system engineering, with proven ability to support microservice-based systems at scale. Collaborative mindset with effective communication within Agile and cross-functional teams, focused on improving reliability and operational efficiency.</p>
+            </section>
+
+            <!-- Skills -->
+            <section class="cv-section">
+                <h2>SKILLS</h2>
+                <div class="skills-grid">
+                    <div class="skill-row">
+                        <span class="skill-label">Cloud &amp; Infra:</span>
+                        <span class="skill-value">AWS (VPC, EKS, Lambda, API Gateway, CloudWatch, CloudTrail, CloudFront, CodePipeline, CodeBuild, CloudFormation, EC2, Transit Gateway, Kinesis Data Firehose), Terraform</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">CI/CD:</span>
+                        <span class="skill-value">Jenkins, AWS CodePipeline, AWS CodeBuild, GitLab CI, Codemagic</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Container &amp; Orchestration:</span>
+                        <span class="skill-value">Docker, Kubernetes, EKS, Docker Swarm, Portainer</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Monitoring:</span>
+                        <span class="skill-value">Opensearch/ELK, Grafana, CloudWatch, Prometheus</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Security:</span>
+                        <span class="skill-value">Prisma Cloud, SAST, DAST, PCI DSS 4.0</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Scripting:</span>
+                        <span class="skill-value">Python, Bash, Groovy, Shell, YAML</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Tools:</span>
+                        <span class="skill-value">GitHub, GitLab, Jfrog Artifactory, vSphere, Prisma Cloud, Codemagic</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="cv-section">
+                <h2>EXPERIENCE</h2>
+
+                <!-- VPBank -->
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">VPBANK SMBC FINANCE COMPANY LIMITED</span>
+                        <span class="date">11/2024 &ndash; Present</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">DevOps Engineer</span>
+                        <span class="location">Ho Chi Minh City</span>
+                    </div>
+                    <p class="entry-description">Supported banking and financial systems at FE Credit by building and operating cloud infrastructure, automating CI/CD pipelines, and ensuring system security, stability, and scalability.</p>
+                    <p class="project-name">Project: FEOL 2.0 &ndash; FE Online 2.0 integrated with UBank by VPBank</p>
+                    <ul>
+                        <li>Ensured CI/CD pipelines complied with SDLC standards, DR architecture, and security policies, supporting PCI DSS 4.0 compliance.</li>
+                        <li>Modernized the platform by moving key components to a serverless architecture.</li>
+                        <li>Built and operated AWS-based scalable systems handling high traffic, achieving zero-downtime transactions during peak usage.</li>
+                        <li>Reduced monthly logging costs by 60% through centralized log processing with Kinesis Data Firehose and S3.</li>
+                        <li>Managed AWS Cloud infrastructure including VPC, subnets, routing, and security groups.</li>
+                        <li>Built and maintained CI/CD pipelines for backend services, serverless APIs, and mobile app.</li>
+                        <li>Implemented and maintained EKS workloads using Jenkins pipelines and Kubernetes YAML manifests.</li>
+                        <li>Monitored system metrics and traffic using CloudWatch and Grafana dashboards.</li>
+                        <li>Integrated security checks into CI/CD pipelines, including SAST, DAST, and Prisma Cloud.</li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <!-- PAGE 2 -->
+        <div class="page" id="page2">
+            <section class="cv-section">
+
+                <!-- Samsung -->
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">SAMSUNG ELECTRONICS HCMC CE COMPLEX</span>
+                        <span class="date">03/2024 &ndash; 10/2024</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">Integration Engineer</span>
+                        <span class="location">Ho Chi Minh City</span>
+                    </div>
+                    <p class="entry-description">Responsible for implementing pipelines to build and release images for Visual Display. Managed and optimized CI/CD automation systems, ensuring the system operates efficiently for each version.</p>
+                    <p class="project-name">Project: Visual Display Project (VD S/W R&amp;D G)</p>
+                    <ul>
+                        <li>Implemented image storage solutions using Artifactory to ensure quality prior to release.</li>
+                        <li>Designed and maintained CI pipelines for testing new product models.</li>
+                        <li>Optimized build times by applying parallel job execution for model image builds.</li>
+                        <li>Analyzed build and defect errors, providing solutions to enhance development efficiency.</li>
+                    </ul>
+                </div>
+
+                <!-- TMA Solutions -->
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">TMA SOLUTIONS</span>
+                        <span class="date">04/2022 &ndash; 03/2024</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">DevOps Engineer</span>
+                        <span class="location">Ho Chi Minh City</span>
+                    </div>
+                    <p class="entry-description">Contributed to 5G and Enterprise Asset Management projects by building and optimizing CI/CD platforms, automating build and deployment workflows, and ensuring secure, reliable software releases.</p>
+
+                    <p class="project-name">Project: 5G</p>
+                    <ul>
+                        <li>Maintained and enhanced CI/CD pipelines using Jenkins to support embedded systems and release micro versions for microservices.</li>
+                        <li>Designed and implemented reusable modules within Jenkins Shared Libraries for the DevOps team.</li>
+                        <li>Implemented daily service version reporting and automated release notes using the ELK Stack.</li>
+                        <li>Integrated code quality and security checks, including SAST and DAST, into CI pipelines.</li>
+                        <li>Analyzed CI pipeline failures and proposed effective solutions to improve stability and reliability.</li>
+                    </ul>
+
+                    <p class="project-name">Project: Enterprise Asset Management</p>
+                    <ul>
+                        <li>Automated build, deployment, and testing processes to improve development efficiency for EAM systems.</li>
+                        <li>Integrated SAST and DAST tools into GitLab CI/CD pipelines.</li>
+                        <li>Implemented containerization and managed Ingress/Egress controllers for microservices.</li>
+                        <li>Developed Python-based modules to automate tasks within CI/CD pipelines.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Education -->
+            <section class="cv-section">
+                <h2>EDUCATION</h2>
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">HOA SEN UNIVERSITY</span>
+                        <span class="date">09/2017 &ndash; 03/2022</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">Bachelor &ndash; Communication and Computer Networking</span>
+                        <span class="location">Ho Chi Minh City</span>
+                    </div>
+                    <p class="entry-description">Bachelor's degree in Communication and Computer Networking. Foundation in network protocols, system administration, cloud fundamentals, and IaC.</p>
+                </div>
+            </section>
+
+            <!-- Certifications -->
+            <section class="cv-section">
+                <h2>CERTIFICATIONS</h2>
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">AWS CERTIFIED SOLUTIONS ARCHITECT &ndash; ASSOCIATE</span>
+                        <span class="date">03/2025 &ndash; 03/2028</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">Amazon Web Services</span>
+                        <span class="location"></span>
+                    </div>
+                </div>
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">AWS CERTIFIED DEVELOPER &ndash; ASSOCIATE</span>
+                        <span class="date">04/2026 &ndash; 04/2029</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">Amazon Web Services</span>
+                        <span class="location"></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Awards -->
+            <section class="cv-section">
+                <h2>AWARDS</h2>
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">VPBANK TECHNOLOGY HACKATHON 2025 SENIOR TRACK (TOP WARRIOR)</span>
+                        <span class="date">11/2025</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">VPBank &amp; AWS Vietnam</span>
+                        <span class="location"></span>
+                    </div>
+                </div>
+                <div class="experience-entry">
+                    <div class="entry-header">
+                        <span class="company">SAMSUNG INNOVATION TECH CHALLENGE 2022 (2ND PLACE)</span>
+                        <span class="date">01/2022</span>
+                    </div>
+                    <div class="entry-subheader">
+                        <span class="title">Samsung Innovation Campus</span>
+                        <span class="location"></span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="assets/js/print-cv.js"></script>
+</body>
+</html>

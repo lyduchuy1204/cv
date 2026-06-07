@@ -1,0 +1,22 @@
+# OS-generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.kiro/
+
+# Logs & temp
+*.log
+*.tmp
+
+# Local-only files
+.env
+.env.*
+*.local
