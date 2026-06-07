@@ -71,11 +71,18 @@ body {
     background-color: #333;
 }
 
-/* Screen-only Avatar (hidden when printing) */
-.screen-avatar {
+/* Screen-only Avatar with hover contact panel (hidden when printing) */
+.avatar-wrap {
     position: fixed;
     top: 20px;
     left: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.screen-avatar {
     width: 120px;
     height: 120px;
     border-radius: 50%;
@@ -83,7 +90,51 @@ body {
     border: 3px solid var(--color-text);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     background-color: var(--color-bg);
-    z-index: 1000;
+    cursor: pointer;
+}
+
+.contact-popover {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-text);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    transform: translateX(-12px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.avatar-wrap:hover .contact-popover,
+.avatar-wrap:focus-within .contact-popover {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.contact-popover a {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.contact-popover a:hover,
+.contact-popover a:focus-visible {
+    background-color: var(--color-text);
+    color: var(--color-bg);
+    transform: translateY(-2px);
+    outline: none;
+    text-decoration: none;
 }
 
 /* Header */
@@ -250,6 +301,10 @@ ul li {
         display: none !important;
     }
 
+    .avatar-wrap {
+        display: none !important;
+    }
+
     .cv-container {
         max-width: none;
         margin: 0;
@@ -304,5 +359,18 @@ ul li {
         display: block;
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    .avatar-wrap {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .contact-popover {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
     }
 }
